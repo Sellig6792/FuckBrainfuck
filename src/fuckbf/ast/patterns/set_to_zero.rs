@@ -1,4 +1,5 @@
-use crate::ast::{InstructionTrait, InstructionType, Pattern, PatternType};
+use super::{InstructionTrait, Pattern, PatternType};
+use crate::fuckbf::ast::InstructionType;
 
 #[derive(Clone, Debug, PartialEq)]
 pub struct SetToZero {}
@@ -8,7 +9,7 @@ impl<T> Pattern<T> for SetToZero
 where
     T: InstructionTrait<T> + Clone,
 {
-    fn match_pattern(&self, instructions: &Vec<T>) -> bool {
+    fn match_pattern(&self, instructions: &[T]) -> bool {
         if instructions.len() != 1 {
             return false;
         }
@@ -40,7 +41,7 @@ where
         // Replace the pattern with a SetToZero instruction
         // Remove the instructions that were replaced
         for instruction in &mut instructions {
-            if self.match_pattern(&vec![instruction.clone()]) {
+            if self.match_pattern(&[instruction.clone()]) {
                 let new_instruction = T::new(
                     InstructionType::Pattern(PatternType::SetToZero(SetToZero {})),
                     None,

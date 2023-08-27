@@ -1,7 +1,7 @@
 mod set_to_zero;
 
-use crate::ast::InstructionTrait;
-use crate::optimization::OptimizedInstruction;
+use super::InstructionTrait;
+use crate::fuckbf::optimization::OptimizedInstruction;
 
 pub mod pattern_structs {
     pub use super::set_to_zero::SetToZero;
@@ -11,7 +11,7 @@ pub trait Pattern<T>
 where
     T: InstructionTrait<T>,
 {
-    fn match_pattern(&self, instructions: &Vec<T>) -> bool;
+    fn match_pattern(&self, instructions: &[T]) -> bool;
     fn replace(&self, instructions: Vec<T>) -> Vec<T>;
 }
 

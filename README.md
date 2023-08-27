@@ -11,11 +11,11 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/Sellig6792/FuckBrainfuck">
+  <a href="https://github.com/Sellig6792/FuckBF">
     <img src="assets/logo.png" alt="Logo" width="80" height="auto">
   </a>
 
-  ### FuckBrainfuck
+  ### FuckBF
   [Explore documentation][wiki] | [Report Bug][issues] | [Request Feature][issues]
 </div>
 <br/>
@@ -39,7 +39,7 @@
 It all started on Graven's Discord server on June 26, 2022.
 It was a joke that ended up on this shit...
 
-So FuckBrainfuck was born. It is an improvement of the classic BrainFuck, with some new features and new commands.
+So FuckBF was born. It is an improvement of the classic BrainFuck, with some new features and new commands.
 
 Already implemented:
 
@@ -68,8 +68,8 @@ If your system is not supported, you can [build it yourself](#2-building-from-so
 You need to have [Cargo](https://doc.rust-lang.org/cargo/getting-started/installation.html) installed.
 
 ```sh
-git clone https://github.com/Sellig6792/FuckBrainfuck.git
-cd FuckBrainfuck
+git clone https://github.com/Sellig6792/FuckBF.git
+cd FuckBF
 cargo build --release
 ```
 
@@ -79,7 +79,7 @@ cargo build --release
 <!-- USAGE EXAMPLES -->
 ## Usage
 ```
-fbf [OPTIONS] <FILE>
+fuckbf [OPTIONS] <FILE>
 ```
 
 
@@ -140,20 +140,20 @@ Sellig6792 - [@Sellig6792](https://twitter.com/Sellig6792) - sellig6792@gmail.co
 
 
 <!-- MARKDOWN LINKS & IMAGES -->
-[contributors-shield]: https://img.shields.io/github/contributors/Sellig6792/FuckBrainfuck.svg?style=for-the-badge
-[contributors-url]: https://github.com/Sellig6792/FuckBrainfuck/graphs/contributors
+[contributors-shield]: https://img.shields.io/github/contributors/Sellig6792/FuckBF.svg?style=for-the-badge
+[contributors-url]: https://github.com/Sellig6792/FuckBF/graphs/contributors
 
-[forks-shield]: https://img.shields.io/github/forks/Sellig6792/FuckBrainfuck.svg?style=for-the-badge
-[forks-url]: https://github.com/Sellig6792/FuckBrainfuck/network/members
+[forks-shield]: https://img.shields.io/github/forks/Sellig6792/FuckBF.svg?style=for-the-badge
+[forks-url]: https://github.com/Sellig6792/FuckBF/network/members
 
-[stars-shield]: https://img.shields.io/github/stars/Sellig6792/FuckBrainfuck.svg?style=for-the-badge
-[stars-url]: https://github.com/Sellig6792/FuckBrainfuck/stargazers
+[stars-shield]: https://img.shields.io/github/stars/Sellig6792/FuckBF.svg?style=for-the-badge
+[stars-url]: https://github.com/Sellig6792/FuckBF/stargazers
 
-[issues-shield]: https://img.shields.io/github/issues/Sellig6792/FuckBrainfuck.svg?style=for-the-badge
-[issues-url]: https://github.com/Sellig6792/FuckBrainfuck/issues
+[issues-shield]: https://img.shields.io/github/issues/Sellig6792/FuckBF.svg?style=for-the-badge
+[issues-url]: https://github.com/Sellig6792/FuckBF/issues
 
-[license-shield]: https://img.shields.io/github/license/Sellig6792/FuckBrainfuck.svg?style=for-the-badge
-[license-url]: https://github.com/Sellig6792/FuckBrainfuck/blob/main/LICENSE
+[license-shield]: https://img.shields.io/github/license/Sellig6792/FuckBF.svg?style=for-the-badge
+[license-url]: https://github.com/Sellig6792/FuckBF/blob/main/LICENSE
 [rust-shield]: https://img.shields.io/badge/-rust-black.svg?style=for-the-badge&logo=rust&colorB=555
 [cargo-shield]: https://img.shields.io/badge/-cargo-black.svg?style=for-the-badge&logo=rust&colorB=555
 [brainFuck-url]: https://en.wikipedia.org/wiki/Brainfuck
@@ -163,13 +163,13 @@ Sellig6792 - [@Sellig6792](https://twitter.com/Sellig6792) - sellig6792@gmail.co
 [astremy-brainfuck-pdf]: https://cdn.discordapp.com/attachments/815331771197030441/824402769397940234/brainfuck.pdf
 [wikipedia-brainfuck-url]: https://en.wikipedia.org/wiki/Brainfuck
 
-[wiki]: https://github.com/Sellig6792/FuckBrainfuck/wiki
+[wiki]: https://github.com/Sellig6792/FuckBF/wiki
 
-[wiki-function]: https://github.com/Sellig6792/FuckBrainfuck/wiki#functions
-[wiki-optimisation]: https://github.com/Sellig6792/FuckBrainfuck/wiki#optimisation
-[wiki-scope]: https://github.com/Sellig6792/FuckBrainfuck/wiki#scope
-[wiki-comment]: https://github.com/Sellig6792/FuckBrainfuck/wiki#comments
+[wiki-function]: https://github.com/Sellig6792/FuckBF/wiki#functions
+[wiki-optimisation]: https://github.com/Sellig6792/FuckBF/wiki#optimisation
+[wiki-scope]: https://github.com/Sellig6792/FuckBF/wiki#scope
+[wiki-comment]: https://github.com/Sellig6792/FuckBF/wiki#comments
 
 
-[issues]: https://github.com/Sellig6792/FuckBrainfuck/issues
-[release]: https://github.com/Sellig6792/FuckBrainfuck/releases
+[issues]: https://github.com/Sellig6792/FuckBF/issues
+[release]: https://github.com/Sellig6792/FuckBF/releases

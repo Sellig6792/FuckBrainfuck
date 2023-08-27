@@ -1,13 +1,17 @@
 [package]
-name = "fuckbrainfuck"
-version = "2.1.0"
+name = "FuckBF"
+version = "2.2.0"
 edition = "2021"
 authors = ["Sellig6792 <sellig6792@gmail.com>"]
 description = "The improved Brainfuck"
+
+repository = "https://github.com/Sellig6792/FuckBF"
+homepage = "https://github.com/Sellig6792/FuckBF"
+readme = "README.md"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [[bin]]
-name = "fbf"
+name = "fuckbf"
 path = "src/main.rs"
 
 [dependencies]
@@ -15,3 +19,6 @@ clap = { version = "4.0.32", features = ["derive"] }
 anyhow = "1.0.68"
 rand = "0.8.5"
 num = "0.4.0"
+colored = "2.0.0"
+reqwest = { version = "0.11.13", features = ["blocking"] }
+serde_json = "1.0.91"

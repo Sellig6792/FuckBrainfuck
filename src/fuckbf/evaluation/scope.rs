@@ -1,6 +1,6 @@
-use crate::ast::{InstructionTrait, InstructionType};
+use crate::fuckbf::ast::{InstructionTrait, InstructionType};
 
-use crate::evaluation::Cell;
+use super::Cell;
 
 #[derive(Clone)]
 pub struct Scope<T: InstructionTrait<T>> {
@@ -145,7 +145,7 @@ where
 #[cfg(test)]
 mod tests {
     use super::*;
-    use crate::ast::Instruction;
+    use crate::fuckbf::ast::Instruction;
 
     #[test]
     fn test_move_right() {

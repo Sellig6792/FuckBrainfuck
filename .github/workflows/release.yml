@@ -90,17 +90,17 @@ jobs:
             os: ubuntu-latest
         include: # List of all targets to build for and the name for common mortals
           - target: aarch64-unknown-linux-gnu
-            name: arm64
+            name: linux-arm64
           - target: i686-pc-windows-gnu
-            name: win-i686
+            name: windows-i686
           - target: x86_64-pc-windows-gnu
-            name: win-x86_64
+            name: windows-x86_64
           - target: i686-unknown-linux-gnu
             name: linux-i686
           - target: x86_64-unknown-linux-gnu
             name: linux-x86_64
           - target: x86_64-apple-darwin
-            name: macos
+            name: macos-x86_64
             os: macos-latest
 
 
@@ -135,14 +135,14 @@ jobs:
 
       - name: Rename binary (Linux & macOS)
         if: matrix.target != 'x86_64-pc-windows-gnu' && matrix.target != 'i686-pc-windows-gnu'
-        run: mv target/${{ matrix.target }}/release/fbf target/${{ matrix.target }}/release/fbf-${{ matrix.name }}
+        run: mv target/${{ matrix.target }}/release/fuckbf target/${{ matrix.target }}/release/fuckbf-${{ matrix.name }}
 
       - name: Rename binary (Windows)
         if: matrix.target == 'x86_64-pc-windows-gnu' || matrix.target == 'i686-pc-windows-gnu'
-        run: mv target/${{ matrix.target }}/release/fbf.exe target/${{ matrix.target }}/release/fbf-${{ matrix.name }}.exe
+        run: mv target/${{ matrix.target }}/release/fuckbf.exe target/${{ matrix.target }}/release/fuckbf-${{ matrix.name }}.exe
 
       - name: Upload release
         uses: softprops/action-gh-release@v1
         with:
-          files: target/${{ matrix.target }}/release/fbf-${{ matrix.name }}*
+          files: target/${{ matrix.target }}/release/fuckbf-${{ matrix.name }}*
           token: ${{ secrets.PAT_GITHUB }}

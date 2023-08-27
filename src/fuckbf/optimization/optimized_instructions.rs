@@ -1,4 +1,4 @@
-use crate::ast::{InstructionTrait, InstructionType};
+use crate::fuckbf::ast::{InstructionTrait, InstructionType};
 
 #[derive(Clone)]
 pub struct OptimizedInstruction {
@@ -33,31 +33,25 @@ impl OptimizedInstruction {
 
     pub fn is_opposed(&self, other: &OptimizedInstruction) -> bool {
         match self.get_instruction_type() {
-            InstructionType::Increment => match other.get_instruction_type() {
-                InstructionType::Decrement => true,
-                _ => false,
-            },
-            InstructionType::Decrement => match other.get_instruction_type() {
-                InstructionType::Increment => true,
-                _ => false,
-            },
-            InstructionType::MoveLeft => match other.get_instruction_type() {
-                InstructionType::MoveRight => true,
-                _ => false,
-            },
-            InstructionType::MoveRight => match other.get_instruction_type() {
-                InstructionType::MoveLeft => true,
-                _ => false,
-            },
-            InstructionType::MoveLeftScope => match other.get_instruction_type() {
-                InstructionType::MoveRightScope => true,
-                _ => false,
-            },
-            InstructionType::MoveRightScope => match other.get_instruction_type() {
-                InstructionType::MoveLeftScope => true,
-                _ => false,
-            },
-
+            InstructionType::Increment => {
+                matches!(other.get_instruction_type(), InstructionType::Decrement)
+            }
+            InstructionType::Decrement => {
+                matches!(other.get_instruction_type(), InstructionType::Increment)
+            }
+            InstructionType::MoveLeft => {
+                matches!(other.get_instruction_type(), InstructionType::MoveRight)
+            }
+            InstructionType::MoveRight => {
+                matches!(other.get_instruction_type(), InstructionType::MoveLeft)
+            }
+            InstructionType::MoveLeftScope => matches!(
+                other.get_instruction_type(),
+                InstructionType::MoveRightScope
+            ),
+            InstructionType::MoveRightScope => {
+                matches!(other.get_instruction_type(), InstructionType::MoveLeftScope)
+            }
             _ => false,
         }
     }
